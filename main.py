@@ -20,12 +20,25 @@ def match_lawyers(preferred_language=None, max_price=None):
     matched_lawyers = [lawyer for lawyer in lawyers_data if (preferred_language in lawyer["languages"] or preferred_language is None) and (lawyer["price"] <= max_price or max_price is None)]
     return matched_lawyers
 
+@app.route('/home')
+def home():
+    return render_template('index.html')
+
+# @app.route('')
+@app.route('/chat')
+def chat():
+    gradio_url = 'http://127.0.0.1:7860'
+    return render_template('chat.html', gradio_url=gradio_url)
+
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
+
 # Frontend implementation.
 @app.route('/')
+@app.route('/login')
 def index():
-    gradio_url = 'https://3617efae905e54922a.gradio.live'
-    return render_template('test.html', gradio_url=gradio_url)
-    # return app.send_static_file('index.html')  # Assuming you have an 'index.html' in your 'static' folder
+    return render_template('login.html')
 
 if __name__ == '__main__':
   #  print(current_id)

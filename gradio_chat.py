@@ -16,7 +16,7 @@ def add_message(history, message):
     return history, gr.MultimodalTextbox(value=None, interactive=False)
 
 def bot(history):
-    response = "**That's cool!**"
+    response = "**Welcome to FirstLegalAid! I am your agent who can help you with your cases. What can I do for you?**"
     history[-1][1] = ""
     for character in response:
         history[-1][1] += character

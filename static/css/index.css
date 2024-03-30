@@ -39,7 +39,7 @@ a {
 }
 
 .menu-title {
-    width: 78px;
+    width: 100px;
     height: 38px;
     left: 82px;
     top: 42px;
@@ -228,7 +228,7 @@ a {
     padding-left: 18px;
     padding-right: 18px;
     left: 290px;
-    top: 315px;
+    top: 165px;
     position: absolute;
     background: rgba(255, 255, 255, 0.34);
     border-radius: 14px;
