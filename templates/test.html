@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Embedded Gradio App</title>
+    <style>
+        iframe {
+            width: 100%; /* Adjust as needed */
+            height: 600px; /* Adjust as needed */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Gradio App</h1>
+    <!-- Embed the Gradio app using the URL passed from Flask -->
+    <iframe src="{{ gradio_url }}" title="Gradio App"></iframe>
+</body>
+</html>

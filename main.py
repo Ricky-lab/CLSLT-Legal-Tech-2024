@@ -23,5 +23,10 @@ def match_lawyers(preferred_language=None, max_price=None):
 # Frontend implementation.
 @app.route('/')
 def index():
-    return app.send_static_file('index.html')  # Assuming you have an 'index.html' in your 'static' folder
+    gradio_url = 'https://3617efae905e54922a.gradio.live'
+    return render_template('test.html', gradio_url=gradio_url)
+    # return app.send_static_file('index.html')  # Assuming you have an 'index.html' in your 'static' folder
 
+if __name__ == '__main__':
+  #  print(current_id)
+   app.run(debug = True, port=3000)
